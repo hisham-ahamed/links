@@ -1,0 +1,1 @@
+sudo wget -O cef_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_troubleshoot.py&&sudo python cef_troubleshoot.py  69579fdb-bf9b-499a-afd9-0291513833e6
