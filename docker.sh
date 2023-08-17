@@ -1,1 +1,1 @@
-(echo acad5fd4bd10f59b5791202ee2a989b6ec075d7f35e87c59f084cfe497b06547) | docker run --name Almeera_MCAS_LogCollector -p 601:601/tcp -p 21:21 -p 20000-20099:20000-20099 -e "PUBLICIP='10.10.6.61'" -e "PROXY=" -e "SYSLOG=true" -e "CONSOLE=almeeraqatar.eu2.portal.cloudappsecurity.com" -e "COLLECTOR=Almeera_MCAS_LogCollector" --security-opt apparmor:unconfined --cap-add=SYS_ADMIN --restart unless-stopped -a stdin -i mcr.microsoft.com/mcas/logcollector starter
+
