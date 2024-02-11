@@ -14,9 +14,9 @@ Set-AzContext -Subscription "HMC-Hub-QC"
 $ResourceGroup = "rg-sec-hub-qc-001"
 $WorkspaceName = "log-hub-qc-001"
 
-# Import Saved Searches
+# Import Saved Searches as Functions
 foreach ($search in $ExportedSearches) {
     $id = $search.Category + "|" + $search.DisplayName
-    New-AzOperationalInsightsSavedSearch -Force -ResourceGroupName $ResourceGroup -WorkspaceName $WorkspaceName -SavedSearchId $id -DisplayName $search.DisplayName -Category $search.Category -Query $search.Query -Version $search.Version
+    New-AzOperationalInsightsSavedSearchV2 -Force -ResourceGroupName $ResourceGroup -WorkspaceName $WorkspaceName -SavedSearchId $id -DisplayName $search.DisplayName -Category $search.Category -Query $search.Query -Version $search.Version -IsFunction $true
 }
 
